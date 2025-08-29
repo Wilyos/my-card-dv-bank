@@ -1,3 +1,8 @@
+// Ruta raíz para verificar que el servidor responde
+app.get('/', (req, res) => {
+  res.send('Servidor Express activo. Usa /my-personal-card1 para ver una landing.');
+});
+
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -16,8 +21,10 @@ app.get('/:landing', (req, res) => {
   const landing = req.params.landing; // Ej: "my-personal-card1"
   const folder = landing;
   const filePath = path.join(__dirname, 'landings', folder, 'index.html');
+  console.log('Intentando servir:', filePath);
   res.sendFile(filePath, err => {
     if (err) {
+      console.error('Error al servir landing:', err);
       res.status(404).send('Landing no encontrada');
     }
   });
