@@ -13,7 +13,7 @@ app.get('/:landing', (req, res) => {
   });
 });
 
-const PORT = 80;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
 });
