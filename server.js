@@ -1,3 +1,7 @@
+
+// Inicialización de express
+// ...existing code...
+
 // Ruta para favicon.ico (devuelve un PNG vacío)
 app.get('/favicon.ico', (req, res) => {
   res.status(204).end(); // Sin contenido
