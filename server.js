@@ -1,3 +1,12 @@
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Ruta raíz para verificar que el servidor responde
+app.get('/', (req, res) => {
+  res.send('Servidor Express activo. Usa /my-personal-card1 para ver una landing.');
+});
+
 // Endpoint de diagnóstico para listar archivos de una landing
 app.get('/test-files/:landing', (req, res) => {
   const landing = req.params.landing;
@@ -9,15 +18,6 @@ app.get('/test-files/:landing', (req, res) => {
     res.send(`Archivos en ${dirPath}:<br>${files.join('<br>')}`);
   });
 });
-const express = require('express');
-const path = require('path');
-const app = express();
-
-// Ruta raíz para verificar que el servidor responde
-app.get('/', (req, res) => {
-  res.send('Servidor Express activo. Usa /my-personal-card1 para ver una landing.');
-});
-
 
 // Ruta para favicon.ico (devuelve un PNG vacío)
 app.get('/favicon.ico', (req, res) => {
