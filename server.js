@@ -33,7 +33,7 @@ const errorLogPath = path.join(__dirname, 'error.log');
 app.get('/:landing', (req, res) => {
   const landing = req.params.landing; // Ej: "my-personal-card1"
   const folder = landing;
-  const filePath = path.join(__dirname, 'landings', folder, 'test.txt');
+  const filePath = path.join(__dirname, 'public', 'landings', folder, 'test.txt');
   const logError = (msg, err) => {
     const fullMsg = `[${new Date().toISOString()}] ${msg} ${err ? err.stack || err : ''}\n`;
     fs.appendFile(errorLogPath, fullMsg, () => {});
