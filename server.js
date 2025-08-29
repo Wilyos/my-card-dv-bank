@@ -1,11 +1,12 @@
-// Ruta raíz para verificar que el servidor responde
-app.get('/', (req, res) => {
-  res.send('Servidor Express activo. Usa /my-personal-card1 para ver una landing.');
-});
 
 const express = require('express');
 const path = require('path');
 const app = express();
+
+// Ruta raíz para verificar que el servidor responde
+app.get('/', (req, res) => {
+  res.send('Servidor Express activo. Usa /my-personal-card1 para ver una landing.');
+});
 
 
 // Middleware para normalizar rutas con o sin slash final
