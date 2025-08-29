@@ -1,3 +1,14 @@
+// Endpoint de diagnóstico para listar archivos de una landing
+app.get('/test-files/:landing', (req, res) => {
+  const landing = req.params.landing;
+  const dirPath = path.join(__dirname, 'public', 'landings', landing);
+  fs.readdir(dirPath, (err, files) => {
+    if (err) {
+      return res.status(404).send(`No se pudo acceder a la carpeta: ${dirPath}\nError: ${err}`);
+    }
+    res.send(`Archivos en ${dirPath}:<br>${files.join('<br>')}`);
+  });
+});
 const express = require('express');
 const path = require('path');
 const app = express();
