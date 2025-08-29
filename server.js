@@ -1,6 +1,12 @@
+const express = require('express');
+const path = require('path');
+const app = express();
 
-// Inicialización de express
-// ...existing code...
+// Ruta raíz para verificar que el servidor responde
+app.get('/', (req, res) => {
+  res.send('Servidor Express activo. Usa /my-personal-card1 para ver una landing.');
+});
+
 
 // Ruta para favicon.ico (devuelve un PNG vacío)
 app.get('/favicon.ico', (req, res) => {
@@ -12,16 +18,6 @@ app.use((req, res, next) => {
   console.log(`[${new Date().toISOString()}] Petición recibida: ${req.method} ${req.originalUrl}`);
   next();
 });
-
-const express = require('express');
-const path = require('path');
-const app = express();
-
-// Ruta raíz para verificar que el servidor responde
-app.get('/', (req, res) => {
-  res.send('Servidor Express activo. Usa /my-personal-card1 para ver una landing.');
-});
-
 
 // Middleware para normalizar rutas con o sin slash final
 app.use((req, res, next) => {
