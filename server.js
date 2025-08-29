@@ -18,16 +18,23 @@ app.use((req, res, next) => {
   }
 });
 
+const fs = require('fs');
 app.get('/:landing', (req, res) => {
   const landing = req.params.landing; // Ej: "my-personal-card1"
   const folder = landing;
   const filePath = path.join(__dirname, 'landings', folder, 'index.html');
   console.log('Intentando servir:', filePath);
-  res.sendFile(filePath, err => {
+  fs.access(filePath, fs.constants.F_OK, (err) => {
     if (err) {
-      console.error('Error al servir landing:', err);
-      res.status(404).send('Landing no encontrada');
+      console.error('Archivo no encontrado o error de acceso:', err);
+      return res.status(404).send('Landing no encontrada o error de acceso.');
     }
+    res.sendFile(filePath, (err) => {
+      if (err) {
+        console.error('Error al servir landing:', err);
+        res.status(500).send('Error interno al servir la landing.');
+      }
+    });
   });
 });
 
