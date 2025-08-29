@@ -1,3 +1,4 @@
+
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -6,6 +7,9 @@ const app = express();
 app.get('/', (req, res) => {
   res.send('Servidor Express activo. Usa /my-personal-card1 para ver una landing.');
 });
+
+// Middleware para servir archivos estáticos desde public
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Endpoint de diagnóstico para listar archivos de una landing
 app.get('/test-files/:landing', (req, res) => {
