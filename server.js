@@ -1,3 +1,13 @@
+// Ruta para favicon.ico (devuelve un PNG vacío)
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).end(); // Sin contenido
+});
+
+// Log de todas las rutas recibidas
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] Petición recibida: ${req.method} ${req.originalUrl}`);
+  next();
+});
 
 const express = require('express');
 const path = require('path');
