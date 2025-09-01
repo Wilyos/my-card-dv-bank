@@ -48,7 +48,7 @@ const errorLogPath = path.join(__dirname, 'error.log');
 app.get('/:landing', (req, res) => {
   const landing = req.params.landing; // Ej: "my-personal-card1"
   const folder = landing;
-  const filePath = path.join(__dirname, 'public', 'landings', folder, 'test.txt');
+  const filePath = path.join(__dirname, 'public', 'landings', folder, 'index.html');
   const logError = (msg, err) => {
     const fullMsg = `[${new Date().toISOString()}] ${msg} ${err ? err.stack || err : ''}\n`;
     fs.appendFile(errorLogPath, fullMsg, () => {});
@@ -57,13 +57,13 @@ app.get('/:landing', (req, res) => {
   console.log('Intentando servir:', filePath);
   fs.access(filePath, fs.constants.F_OK, (err) => {
     if (err) {
-      logError('Archivo no encontrado o error de acceso:', err);
-      return res.status(404).send('Archivo test.txt no encontrado o error de acceso.');
+      logError('Archivo index.html no encontrado o error de acceso:', err);
+      return res.status(404).send('Archivo index.html no encontrado o error de acceso.');
     }
     res.sendFile(filePath, (err) => {
       if (err) {
-        logError('Error al servir test.txt:', err);
-        res.status(500).send('Error interno al servir el archivo test.txt.');
+        logError('Error al servir index.html:', err);
+        res.status(500).send('Error interno al servir el archivo index.html.');
       }
     });
   });
