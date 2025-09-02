@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	if (saveContactBtn) {
 		saveContactBtn.addEventListener('click', function(e) {
 			e.preventDefault();
-			const vcardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Santa Rosario Moreno.\nORG:D&V Bank\nTEL;TYPE=WORK,VOICE:13363422266\nEMAIL:santargarcia@hotmail.com\nURL:https://bankdv.com/\nEND:VCARD`;
+			const vcardData = `BEGIN:VCARD\nVERSION:3.0\nFN: Elver Gavidia\nORG:D&V Bank\nTEL;TYPE=WORK,VOICE:18188242478\nEMAIL:GAVIDIA.ELVER123@GMAIL.COM\nURL:https://bankdv.com/\nEND:VCARD`;
 			const blob = new Blob([vcardData], { type: 'text/vcard' });
 			const url = URL.createObjectURL(blob);
 			const a = document.createElement('a');
