@@ -1,1 +1,324 @@
-<html><head><title>Landing 142</title></head><body><h1>Bienvenido a la landing 142</h1></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="stylesheet" href="../../css/landing-styles.css">
+		<style>
+				.about-img.profile142 {
+						flex: 0 1 38rem;
+						display: flex;
+						justify-content: center;
+				}
+
+				.about-img.profile142 img {
+						width: min(38rem, 82vw);
+						aspect-ratio: 4 / 5;
+						object-fit: contain;
+						object-position: center;
+						border-radius: 2.8rem;
+						box-shadow: 0 1.6rem 4rem rgba(0, 0, 0, 0.28);
+						padding: 2rem;
+						background: rgba(255, 255, 255, 0.04);
+				}
+
+				@media (max-width: 900px) {
+						.about-img.profile142 img {
+								width: min(32rem, 88vw);
+						}
+				}
+		</style>
+		<title>Walter Osmaro Bonilla | D&V Bank</title>
+</head>
+<body>
+
+	<nav class="navbar">
+		<a href="#" class="logo">Walter Osmaro Bonilla</a>
+		<div class="menu-icon" id="menu-icon">
+			<i class='bx bx-menu'></i>
+		</div>
+		<ul>
+			<li><a href="#home" data-i18n="nav_home">Home</a></li>
+			<li><a href="#about" data-i18n="nav_about">About</a></li>
+			<li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+			<li><a href="#services" data-i18n="nav_service">Service</a></li>
+			<li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+		</ul>
+		<button id="lang-toggle" class="lang-btn">EN</button>
+	</nav>
+
+	<div class="bars-animation">
+		<div class="bar" style="--i:6;"></div>
+		<div class="bar" style="--i:5;"></div>
+		<div class="bar" style="--i:4;"></div>
+		<div class="bar" style="--i:3;"></div>
+		<div class="bar" style="--i:2;"></div>
+		<div class="bar" style="--i:1;"></div>
+	</div>
+
+	<section class="home" id="home">
+		<div class="home-info">
+			<h1 data-i18n="home_title">D&V Bank</h1>
+			<h2>
+				<span data-i18n="home_we_are" class="static-span">Somos</span>
+				<span style="--i:2" data-i18n="home_span1" data-text="Tu contacto directo para una nueva banca" class="animated-span">Tu contacto directo para una nueva banca</span>
+				<span style="--i:1" data-i18n="home_span2" data-text="Conecta con Walter Osmaro Bonilla" class="animated-span">Conecta con Walter Osmaro Bonilla</span>
+			</h2>
+			<p data-i18n="home_desc">Descubre una experiencia financiera mas cercana, agil y segura con el respaldo de D&V Bank.</p>
+			<div class="btn-sci">
+				<a href="#" class="btn" data-i18n="home_save_contact">Guardar contacto</a>
+				<div class="sci">
+					<a href="https://wa.me/18319156872" target="_blank" title="Enviar WhatsApp">
+						<i class='bx bxl-whatsapp'></i>
+					</a>
+					<a href="mailto:Bonillawo09@gmail.com">
+						<i class='bx bx-envelope'></i>
+					</a>
+					<a href="https://bankdv.com/" target="_blank">
+						<i class='bx bx-globe'></i>
+					</a>
+					<a href="https://instagram.com/bank.dv" target="_blank">
+						<i class='bx bxl-instagram'></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="home-img">
+			<div class="img-box">
+				<div class="img-item">
+					<img src="../my-personal-card1/assets/logo-transparent.webp" alt="logo D&V Bank">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="about" id="about">
+		<div class="about-img profile142">
+			<img src="../my-personal-card1/assets/logo-transparent.webp" alt="Logo D&V Bank">
+		</div>
+		<div class="about-content">
+			<h2 class="heading" data-i18n="about_title"><span class='bg-gradient-1'>Conoce</span> a Walter</h2>
+			<p data-i18n="about_desc">
+				Walter Osmaro Bonilla te acompana para conocer una propuesta bancaria moderna, con atencion cercana y soluciones alineadas a tus metas financieras.
+			</p>
+			<a href="#contact">
+				<button class="btn" data-i18n="about_btn">Contactame</button>
+			</a>
+		</div>
+	</section>
+
+	<section id="portfolio" class="projects">
+		<h2 class="heading" data-i18n="projects_title">Lo que <span class='bg-gradient-1'>ofrecemos</span></h2>
+		<div class="projects-box">
+			<div class="project-card">
+				<img src="https://i.imgur.com/uH86OoJ.png" alt="experiencia exclusiva">
+				<h3 data-i18n="project1_title">Una experiencia exclusiva</h3>
+				<p data-i18n="project1_desc">
+					Conoce antes que muchos una propuesta que puede transformar tu relacion con el dinero.
+				</p>
+			</div>
+			<div class="project-card">
+				<img src="https://i.imgur.com/1MiVvxm.png" alt="acceso anticipado">
+				<h3 data-i18n="project2_title">Acceso anticipado</h3>
+				<p data-i18n="project2_desc">
+					Walter puede orientarte sobre lo que viene y como prepararte para aprovechar esta nueva etapa.
+				</p>
+			</div>
+			<div class="project-card">
+				<img src="https://i.imgur.com/IbLBsIQ.png" alt="siguiente paso">
+				<h3 data-i18n="project3_title">Tu siguiente paso</h3>
+				<p data-i18n="project3_desc">
+					Mantente en contacto para recibir informacion exclusiva y avanzar con confianza.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="services" id="services">
+		<h2 class="heading" data-i18n="services_title">Soluciones</h2>
+		<div class="services-container">
+			<div class="service-box">
+				<div class="service-info">
+					<i class='bx bxs-bank'></i>
+					<h4 data-i18n="service1_title">Banca digital</h4>
+					<p data-i18n="service1_desc">
+						Accede a herramientas financieras practicas, rapidas y seguras desde cualquier lugar.
+					</p>
+				</div>
+			</div>
+			<div class="service-box">
+				<div class="service-info">
+					<i class='bx bx-money-withdraw'></i>
+					<h4 data-i18n="service2_title">Soluciones financieras</h4>
+					<p data-i18n="service2_desc">
+						Productos pensados para impulsar decisiones financieras con mayor claridad y respaldo.
+					</p>
+				</div>
+			</div>
+			<div class="service-box">
+				<div class="service-info">
+					<i class='bx bx-check-shield'></i>
+					<h4 data-i18n="service3_title">Innovacion y seguridad</h4>
+					<p data-i18n="service3_desc">
+						Una propuesta donde la innovacion y la proteccion de tus datos trabajan juntas.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact" id="contact">
+		<h2 class="heading" data-i18n="contact_title">Contacto <span class='bg-gradient-1'>directo</span></h2>
+		<div class="contact-content">
+			<div class="social-icons">
+				<ul>
+					<li>
+						<a href="https://wa.me/18319156872" target="_blank" title="Enviar WhatsApp">
+							<i class='bx bxl-whatsapp'></i>
+						</a>
+						<span class="tag-contact" data-i18n="contact_phone">831-915-6872</span>
+					</li>
+					<li>
+						<a href="mailto:Bonillawo09@gmail.com">
+							<i class='bx bx-envelope'></i>
+						</a>
+						<span class="tag-contact" data-i18n="contact_email">Bonillawo09@gmail.com</span>
+					</li>
+					<li>
+						<a href="https://bankdv.com/" target="_blank">
+							<i class='bx bx-globe'></i>
+						</a>
+						<span class="tag-contact" data-i18n="contact_web">bankdv.com</span>
+					</li>
+					<li>
+						<a href="https://instagram.com/bank.dv" target="_blank">
+							<i class='bx bxl-instagram'></i>
+						</a>
+						<span class="tag-contact" data-i18n="contact_instagram">@bank.dv</span>
+					</li>
+				</ul>
+			</div>
+			<div class="about-img">
+				<img src="../my-personal-card1/assets/logo-transparent.webp" alt="logo D&V Bank" />
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<p class="copyright" data-i18n="footer_copy">&copy; D&V Bank 2025</p>
+	</footer>
+
+	<script src="script.js"></script>
+	<script>
+const translations = {
+	en: {
+		nav_home: "Home",
+		nav_about: "About",
+		nav_portfolio: "Portfolio",
+		nav_service: "Services",
+		nav_contact: "Contact",
+		home_title: "D&V Bank",
+		home_we_are: "We are",
+		home_span1: "Your direct contact for a new banking experience",
+		home_span2: "Connect with Walter Osmaro Bonilla",
+		home_desc: "Discover a closer, agile and secure financial experience backed by D&V Bank.",
+		home_save_contact: "Save Contact",
+		about_title: "<span class='bg-gradient-1'>Meet</span> Walter",
+		about_desc: "Walter Osmaro Bonilla helps you explore a modern banking proposal with close attention and solutions aligned with your financial goals.",
+		about_btn: "Contact Me",
+		projects_title: "What <span class='bg-gradient-1'>we offer</span>",
+		project1_title: "An exclusive experience",
+		project1_desc: "Be among the first to discover a proposal that can transform your relationship with money.",
+		project2_title: "Early access",
+		project2_desc: "Walter can guide you through what is coming next and how to be ready to take advantage of it.",
+		project3_title: "Your next step",
+		project3_desc: "Stay in touch to receive exclusive information and move forward with confidence.",
+		services_title: "Solutions",
+		service1_title: "Digital banking",
+		service1_desc: "Access practical, fast and secure financial tools from anywhere.",
+		service2_title: "Financial solutions",
+		service2_desc: "Products designed to support better financial decisions with clarity and backing.",
+		service3_title: "Innovation and security",
+		service3_desc: "A proposal where innovation and the protection of your data work together.",
+		contact_title: "Direct <span class='bg-gradient-1'>contact</span>",
+		contact_phone: "831-915-6872",
+		contact_email: "Bonillawo09@gmail.com",
+		contact_web: "bankdv.com",
+		contact_instagram: "@bank.dv",
+		footer_copy: "© D&V Bank 2025"
+	},
+	es: {
+		nav_home: "Inicio",
+		nav_about: "Acerca",
+		nav_portfolio: "Portafolio",
+		nav_service: "Servicios",
+		nav_contact: "Contacto",
+		home_title: "D&V Bank",
+		home_we_are: "Somos",
+		home_span1: "Tu contacto directo para una nueva banca",
+		home_span2: "Conecta con Walter Osmaro Bonilla",
+		home_desc: "Descubre una experiencia financiera mas cercana, agil y segura con el respaldo de D&V Bank.",
+		home_save_contact: "Guardar contacto",
+		about_title: "<span class='bg-gradient-1'>Conoce</span> a Walter",
+		about_desc: "Walter Osmaro Bonilla te acompana para conocer una propuesta bancaria moderna, con atencion cercana y soluciones alineadas a tus metas financieras.",
+		about_btn: "Contactame",
+		projects_title: "Lo que <span class='bg-gradient-1'>ofrecemos</span>",
+		project1_title: "Una experiencia exclusiva",
+		project1_desc: "Conoce antes que muchos una propuesta que puede transformar tu relacion con el dinero.",
+		project2_title: "Acceso anticipado",
+		project2_desc: "Walter puede orientarte sobre lo que viene y como prepararte para aprovechar esta nueva etapa.",
+		project3_title: "Tu siguiente paso",
+		project3_desc: "Mantente en contacto para recibir informacion exclusiva y avanzar con confianza.",
+		services_title: "Soluciones",
+		service1_title: "Banca digital",
+		service1_desc: "Accede a herramientas financieras practicas, rapidas y seguras desde cualquier lugar.",
+		service2_title: "Soluciones financieras",
+		service2_desc: "Productos pensados para impulsar decisiones financieras con mayor claridad y respaldo.",
+		service3_title: "Innovacion y seguridad",
+		service3_desc: "Una propuesta donde la innovacion y la proteccion de tus datos trabajan juntas.",
+		contact_title: "Contacto <span class='bg-gradient-1'>directo</span>",
+		contact_phone: "831-915-6872",
+		contact_email: "Bonillawo09@gmail.com",
+		contact_web: "bankdv.com",
+		contact_instagram: "@bank.dv",
+		footer_copy: "© D&V Bank 2025"
+	}
+};
+
+let currentLang = 'es';
+
+function setLanguage(lang) {
+	currentLang = lang;
+	document.querySelectorAll('[data-i18n]').forEach(function(element) {
+		const key = element.getAttribute('data-i18n');
+		if (!translations[lang][key]) {
+			return;
+		}
+
+		if (element.hasAttribute('data-text')) {
+			element.setAttribute('data-text', translations[lang][key]);
+			element.textContent = translations[lang][key];
+			return;
+		}
+
+		if (key.includes('title')) {
+			element.innerHTML = translations[lang][key];
+			return;
+		}
+
+		element.textContent = translations[lang][key];
+	});
+
+	document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
+}
+
+document.getElementById('lang-toggle').addEventListener('click', function() {
+	setLanguage(currentLang === 'es' ? 'en' : 'es');
+});
+
+setLanguage('es');
+	</script>
+
+</body>
+</html>
